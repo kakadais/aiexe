@@ -291,7 +291,7 @@ if (!isElectron()) {
         }
 
         program
-            .name('aiexe')
+            .name('CodExe')
             .version(VERSION)
             .description('An advanced CLI tool for automating tasks using AI.')
             .usage('[options] [prompt]')
@@ -769,9 +769,9 @@ if (!isElectron()) {
                 label: 'App',
                 submenu: [
                     {
-                        label: 'About AIEXE',
+                        label: 'About CodEex',
                         click: async () => {
-                            await open('https://youtu.be/dvx-gFx6nUw?si=o3w0knQXdQ_H3q8H');
+                            await open('https://codeasy.org');
                         }
                     },
                     { type: 'separator' },

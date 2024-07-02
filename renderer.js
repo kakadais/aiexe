@@ -785,17 +785,7 @@ window.addEventListener('load', async () => {
         let menu = [
             {
                 name: 'AI 설정', async trg() { await configPage(); }
-            },
-            {
-                name: '코드깎는노인 유튜브', async trg() {
-                    await reqAPI('open', { value: 'https://www.youtube.com/@코드깎는노인' });
-                }
-            },
-            {
-                name: '코드깎는노인 클래스', async trg() {
-                    await reqAPI('open', { value: 'https://cokac.com' });
-                }
-            },
+            }
         ];
         menu.forEach(itm => {
 

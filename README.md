@@ -1,4 +1,4 @@
-# aiexe
+# aiexe for CodEasy
 
 Welcome to aiexe, the cutting-edge command-line interface (CLI) and graphical user interface (GUI) tool that integrates powerful AI capabilities directly into your terminal or desktop. Designed for developers, tech enthusiasts, and anyone interested in AI-powered automation, aiexe provides an easy-to-use yet robust platform for executing complex tasks with just a few commands. Harness the power of OpenAI's GPT models, Anthropic's Claude models, Ollama's versatile llama3 models, Gemini models, and GROQ's models to boost your productivity and enhance your decision-making processes.
 
@@ -21,10 +21,6 @@ Welcome to aiexe, the cutting-edge command-line interface (CLI) and graphical us
 9. [Contribute](#contribute)
 10. [Support](#support)
 11. [Subscribe](#subscribe)
-
-## Watch Our Demo
-Watch our demo video on YouTube to get a quick overview of what aiexe can do for you! Click [here](https://www.youtube.com/watch?v=dvx-gFx6nUw) to watch the video.  
-[![Video Label](http://img.youtube.com/vi/dvx-gFx6nUw/0.jpg)](https://youtu.be/dvx-gFx6nUw)  
 
 ## Features
 
@@ -88,13 +84,13 @@ Before you begin, ensure you have `npm` and Python installed on your system.
 #### Windows GUI Installation
 1. Open PowerShell with administrative privileges and run the following command:
    ```powershell
-   if (Get-Command npm -ErrorAction SilentlyContinue) { $timestamp = Get-Date -Format "yyyyMMddHHmmss"; $folderName = "_aiexe_project_$timestamp"; $desktopPath = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), $folderName); New-Item -ItemType Directory -Path $desktopPath -Force; if (Test-Path $desktopPath) { Set-Location -Path $desktopPath; Invoke-WebRequest -Uri "https://github.com/kstost/aiexe/archive/refs/heads/main.zip" -OutFile "__aiexe_project__.zip" -ErrorAction Stop; if (Test-Path "__aiexe_project__.zip") { Expand-Archive -Path "__aiexe_project__.zip" -DestinationPath "."; Set-Location -Path "aiexe-main"; npm i; if ($?) { npm run build; if ($?) { ii "dist"; ii "dist\\aiexe Setup*.exe" } } } } } else { Write-Output "npm is not installed. Please download and install it from https://nodejs.org." }
+   if (Get-Command npm -ErrorAction SilentlyContinue) { $timestamp = Get-Date -Format "yyyyMMddHHmmss"; $folderName = "_aiexe_project_$timestamp"; $desktopPath = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), $folderName); New-Item -ItemType Directory -Path $desktopPath -Force; if (Test-Path $desktopPath) { Set-Location -Path $desktopPath; Invoke-WebRequest -Uri "https://github.com/kakadais/aiexe/archive/refs/heads/main.zip" -OutFile "__aiexe_project__.zip" -ErrorAction Stop; if (Test-Path "__aiexe_project__.zip") { Expand-Archive -Path "__aiexe_project__.zip" -DestinationPath "."; Set-Location -Path "aiexe-main"; npm i; if ($?) { npm run build; if ($?) { ii "dist"; ii "dist\\aiexe Setup*.exe" } } } } } else { Write-Output "npm is not installed. Please download and install it from https://nodejs.org." }
    ```
 
 #### macOS GUI Installation
 1. Open Terminal and run the following command:
    ```bash
-   sudo chown -R 501:20 ~/.npm 2>/dev/null; command -v npm >/dev/null 2>&1 && { timestamp=$(date +%Y%m%d%H%M%S) && cd ~/Downloads && mkdir "_aiexe_project_$timestamp" && cd "_aiexe_project_$timestamp" && git clone https://github.com/kstost/aiexe && cd aiexe && npm i && npm run build && open dist/aiexe-*.dmg; } || { echo "npm is not installed. Please download and install it from https://nodejs.org."; }
+   sudo chown -R 501:20 ~/.npm 2>/dev/null; command -v npm >/dev/null 2>&1 && { timestamp=$(date +%Y%m%d%H%M%S) && cd ~/Downloads && mkdir "_aiexe_project_$timestamp" && cd "_aiexe_project_$timestamp" && git clone https://github.com/kakadais/aiexe && cd aiexe && npm i && npm run build && open dist/aiexe-*.dmg; } || { echo "npm is not installed. Please download and install it from https://nodejs.org."; }
    ```
 
 ## Usage
@@ -228,8 +224,3 @@ Thank you for your contributions to the development and enhancement of `aiexe`!
 
 If you need help or have any questions, please open an issue in the GitHub repository.
 
-## Subscribe
-
-Explore more exciting content about AI and coding on my YouTube channel [코드깎는노인](https://www.youtube.com/@코드깎는노인). Don't forget to subscribe for the latest updates and tutorials!
-
-Harness the potential of `aiexe` and transform your terminal into a powerful AI command center!
